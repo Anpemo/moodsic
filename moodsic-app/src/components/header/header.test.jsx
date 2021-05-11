@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+
 import Header from './header';
 
 describe('Given a Header component', () => {
@@ -28,13 +29,14 @@ describe('Given a Header component', () => {
       expect(nav).toBeTruthy();
     });
 
-    test('It will create a <img> tag', () => {
+    test('It will create a Link with the text Play Moodsic', () => {
+      // Act
       act(() => {
-        render(<BrowserRouter><Header /></BrowserRouter>, container);
+        render(<BrowserRouter><Header><Link to="/" /></Header></BrowserRouter>, container);
       });
-      const img = container.querySelector('img');
-
-      expect(img).toBeTruthy();
+      const nav = container.querySelector('nav');
+      // assert
+      expect(nav).toBeTruthy();
     });
   });
 

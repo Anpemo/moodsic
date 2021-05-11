@@ -49,7 +49,6 @@ export default function AboutUs() {
           <video
             autoPlay
             loop
-            muted
             className="header__video video"
             src="https://trello-attachments.s3.amazonaws.com/5ffc5f162c16556900cb7618/60211328e0b9845236ec8af0/e4f72d26b2552037bacccf572b2e6d60/Dance-compressed.mp4"
           >
